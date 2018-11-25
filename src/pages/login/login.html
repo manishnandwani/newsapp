@@ -1,0 +1,66 @@
+
+<ion-header no-border>
+  <ion-navbar color="dark" *ngIf="data.sign">
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+
+<ion-content padding *ngIf="!userProfile">
+<div *ngIf="!userProfile">
+
+
+  <h1>NEWS</h1>
+    <div text-center class="align2">
+    <button ion-button icon-left (click)="facebookLogin()" >
+
+    <ion-icon color="blue" name="logo-facebook"></ion-icon>
+   <span style="text-transform: initial;"> Login with Facebook</span> 
+
+  </button>
+</div>
+<div text-center class="align1">
+  <button ion-button icon-left (click)="googleLogin()" *ngIf="!userProfile">
+    <ion-icon color="danger" name="logo-google"></ion-icon>
+   <span  style="text-transform: initial;"> Login with Google</span>
+  </button>
+  </div>
+
+</div>  
+<div *ngIf="userProfile">
+  <ion-card class="ioncard">
+
+    <ion-card-header>
+      <ion-item>
+        <ion-avatar>
+          <img src="{{data.photo}}">
+        </ion-avatar>
+        </ion-item>
+     
+    </ion-card-header>
+  
+    <ion-card-content text-center>
+    <p style="font-size: 25px">{{data.name}}</p>
+    </ion-card-content>
+   
+   </ion-card>
+   </div>
+</ion-content>
+
+<ion-footer *ngIf="userProfile">
+    <ion-toolbar>
+      <div text-center>
+        <button ion-button round color="dark" (click)="logout()" end>Logout</button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

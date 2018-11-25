@@ -1,0 +1,17 @@
+page-home {
+    .bar-button-md[icon-only] {
+        padding: 0;
+        font-size:18px;
+    }
+    .content-md {
+        background-color:white;
+    }
+    // span.title.text.text-md {
+    //     padding-left: 1.7em;
+    // }
+    ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button.title-and-icon {
+        height: 72px;
+        padding-top: 8px;
+        color: white;
+    }
+}

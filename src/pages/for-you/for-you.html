@@ -1,0 +1,40 @@
+<!--
+  Generated template for the ForYouPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ForYou</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<!-- <button (click)="getdata()"></button> -->
+<ion-card *ngFor="let i of data.articles;  let i=index;" (click)="inapp(i)">
+  <img src={{i.urlToImage}}/>
+  <ion-card-content> 
+   {{i.title}}
+  </ion-card-content>
+  <ion-icon name="bookmark" icon-end></ion-icon>
+  
+  </ion-card>
+
+
+
+
+</ion-content>
+<!-- <ion-card *ngFor="let data1 of data">
+  <img src={{data1.urlToImage}}/>
+  <ion-card-content>
+    <ion-card-title>
+      Nine Inch Nails Live
+      </ion-card-title>
+    <p>
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+    </p>
+  </ion-card-content>
+</ion-card> -->
+
+

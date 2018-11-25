@@ -1,0 +1,46 @@
+
+<ion-header no-border >
+        <ion-navbar color="dark">
+          <ion-buttons end>
+            <button ion-button icon-only >
+                <ion-icon name="contact"></ion-icon>
+              </button>
+            </ion-buttons>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Interests</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<div class="scroll-content" style="margin-top: 64px;">
+    <ion-content class="card-background-page">
+        <h1>What's your interest?</h1>
+        <ion-grid>
+
+            <ion-row>
+
+                <ion-col>
+                    <ion-card (click)="toggle(i)" [ngClass]="{'done':i.status}" *ngFor="let i of interest; let j=index">
+
+                        <img src={{i.image}} height="119px" />
+
+                        <div class="card-title">{{i.name}}</div>
+                    </ion-card>
+                </ion-col>
+                <ion-col>
+                    <ion-card (click)="toggle(i)" [ngClass]="{'done':i.status}" *ngFor="let i of interest2; let j=index">
+
+                        <img src={{i.image}} height="119px" />
+                        <div class="card-title">{{i.name}}</div>
+
+                        <!-- <div class="card-title" *ngFor="let i=index;">{{i}}</div> -->
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <button ion-button block (click)="continue()">Continue</button>
+    </ion-content>
+</div>
+
